@@ -11,18 +11,20 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DataLoader implements CommandLineRunner {
+
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
     public void run(String... args) throws Exception {
 
         Owner owner1 = new Owner();
+        owner1.setId(1L);
         owner1.setFirstname("Michael");
         owner1.setLastname("Weston");
         owner1.setAddress("123 Brickerel");
@@ -32,6 +34,7 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
+        owner2.setId(2L);
         owner2.setFirstname("Fiona");
         owner2.setLastname("Glenanne");
         owner2.setAddress("123 Brickerel");
