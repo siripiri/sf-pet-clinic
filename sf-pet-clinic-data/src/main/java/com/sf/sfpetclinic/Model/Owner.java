@@ -1,6 +1,9 @@
 package com.sf.sfpetclinic.Model;
 
+import java.util.Set;
+
 public class Owner extends Person{
+    private Set<Pet> pets;
     private String address;
     private String city;
     private String telephone;
@@ -27,5 +30,13 @@ public class Owner extends Person{
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public Set<Pet> getPets() {
+        return pets;
+    }
+
+    public void setPets(Set<Pet> pets) {
+        this.pets = pets;
     }
 }
