@@ -18,7 +18,7 @@ public class Pet extends BaseEntity{
     private PetType petType;
 
     @Column(name = "birth_date")
-    private Date birthDate;
+    private LocalDate birthDate;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
@@ -43,11 +43,11 @@ public class Pet extends BaseEntity{
         this.petType = petType;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
