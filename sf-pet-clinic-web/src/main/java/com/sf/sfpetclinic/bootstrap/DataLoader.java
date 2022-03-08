@@ -5,13 +5,10 @@ import com.sf.sfpetclinic.service.OwnerService;
 import com.sf.sfpetclinic.service.PetTypeService;
 import com.sf.sfpetclinic.service.SpecialityService;
 import com.sf.sfpetclinic.service.VetService;
-import com.sf.sfpetclinic.service.map.OwnerServiceMap;
-import com.sf.sfpetclinic.service.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Component
 public class DataLoader implements CommandLineRunner {
